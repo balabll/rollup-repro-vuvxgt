@@ -1,0 +1,16 @@
+{
+  "name": "rollup-repro",
+  "type": "module",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "exec:dev": "node src/main.js ",
+    "exec:build": "node dist/main.js"
+  },
+  "devDependencies": {
+    "rollup": "^3.7.5"
+  },
+  "stackblitz": {
+    "startCommand": "npm run build"
+  }
+}
