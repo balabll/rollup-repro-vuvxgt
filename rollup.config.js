@@ -1,8 +1,4 @@
 import { defineConfig } from 'rollup';
-import { createOption } from './rollup.config.base';
+import { createOption } from './rollup.config.base.js';
 
-export default defineConfig([
-  createOption('iife', true),
-  createOption('cjs'),
-  createOption('esm'),
-]);
+export default defineConfig([createOption('cjs'), createOption('esm')]);

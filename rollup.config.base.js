@@ -8,9 +8,13 @@ import { terser as rollupTerser } from 'rollup-plugin-terser';
 import image from '@rollup/plugin-image';
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
+import babel from 'rollup-plugin-babel';
 
 const getPlugins = (format, devServe = false) => {
   const plugins = [
+    babel({
+      exclude: 'node_modules/**',
+    }),
     resolve({ extensions: ['.vue', '.js'] }),
     commonjs(),
     vue({ css: false }),
